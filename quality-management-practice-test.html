@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>اختبار إدارة جودة الخدمات السياحية - الفصل الأول</title>
+<style>
+:root{--bg:#f4f6fb;--card:#fff;--tx:#14213d;--mut:#5b6478;--bd:#d9deea;--pr:#3b5bdb;--ok:#2b8a3e;--okb:#e6f6ea;--no:#c92a2a;--nob:#fdeaea;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1424;--card:#1a2138;--tx:#e8ecf7;--mut:#9aa5c0;--bd:#2c3556;--pr:#7c96ff;--ok:#5fd07a;--okb:#16301f;--no:#ff7b7b;--nob:#3a1b1f}}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1424;--card:#1a2138;--tx:#e8ecf7;--mut:#9aa5c0;--bd:#2c3556;--pr:#7c96ff;--ok:#5fd07a;--okb:#16301f;--no:#ff7b7b;--nob:#3a1b1f}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Segoe UI",Tahoma,"Noto Naskh Arabic",Arial,sans-serif;line-height:1.7}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--card);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--card);border-bottom:1px solid var(--bd);padding:10px 14px;display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:10px}
+.meter{display:flex;align-items:center;gap:10px}
+.ring{position:relative;width:64px;height:64px}
+.ring svg{width:64px;height:64px;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:6}
+.ring .bg{stroke:var(--bd)}.ring .fg{stroke:var(--ok);stroke-linecap:round;transition:stroke-dashoffset .5s}
+.ring b{position:absolute;inset:0;display:grid;place-items:center;font-size:.8rem}
+.lbl{font-size:.8rem;color:var(--mut)}.big{font-weight:700;font-size:1.05rem}
+#wbox{border:1px solid var(--no);background:var(--nob);color:var(--no);border-radius:12px;padding:8px 14px;text-align:center}
+#wbox b{display:block;font-size:1.3rem;line-height:1.2}
+.wr{justify-self:end;display:flex;align-items:center;gap:8px}
+#rs{display:inline-flex;align-items:center;gap:5px;font:inherit;font-size:.78rem;line-height:1;color:var(--mut);background:transparent;border:1px solid var(--bd);border-radius:999px;padding:6px 12px;cursor:pointer}
+#rs:hover{color:var(--pr);border-color:var(--pr)}
+#rs .ic{font-size:1rem}
+#wq{flex:none;width:30px;height:30px;border-radius:50%;border:1px solid var(--pr);background:var(--card);color:var(--pr);font:inherit;font-weight:700;font-size:1rem;line-height:1;padding:0;cursor:pointer;text-shadow:0 0 6px var(--pr);animation:glow 2.2s ease-in-out infinite}
+@keyframes glow{0%,100%{box-shadow:0 0 3px 0 var(--pr)}50%{box-shadow:0 0 12px 3px var(--pr)}}
+#wq:hover{animation-duration:1.1s}
+#rs:focus-visible,#wq:focus-visible,.pb:focus-visible{outline:2px solid var(--pr);outline-offset:2px}
+@media (prefers-reduced-motion:reduce){#wq{animation:none;box-shadow:0 0 8px 1px var(--pr)}.ov.on .md{animation:none!important}}
+@media (max-width:520px){header{padding:8px 10px;gap:6px}.ring,.ring svg{width:52px;height:52px}.lbl{font-size:.72rem}.big{font-size:.95rem}#rs .rl{display:none}#rs{padding:6px 9px}#wbox{padding:5px 8px}#wbox b{font-size:1.1rem}.wr{gap:6px}#wq{width:28px;height:28px}}
+main{max-width:760px;margin:0 auto;padding:12px 14px 40px}
+h1{font-size:1.25rem;margin:14px 0 4px}
+.sep{display:flex;align-items:center;gap:10px;margin:36px 0 16px;color:var(--mut);font-size:.88rem;font-weight:600}.sep::before,.sep::after{content:'';flex:1;border-top:2px dashed var(--bd)}h2{font-size:1.05rem;color:var(--pr);margin:26px 0 8px;border-bottom:2px solid var(--bd);padding-bottom:4px}
+.q{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;margin:12px 0;scroll-margin-top:calc(110px + env(safe-area-inset-top,0px))}
+.q.flash{animation:fl 1.6s}@keyframes fl{0%,60%{box-shadow:0 0 0 3px var(--pr)}100%{box-shadow:none}}
+.meta{font-size:.78rem;color:var(--mut);margin-bottom:4px}
+.qt{font-weight:600;margin-bottom:10px}
+.op{display:flex;gap:10px;width:100%;text-align:start;font:inherit;color:var(--tx);background:transparent;border:1px solid var(--bd);border-radius:10px;padding:9px 12px;margin:6px 0;cursor:pointer}
+.op:hover:not(:disabled){border-color:var(--pr)}.op:disabled{cursor:default}
+.op b{color:var(--pr)}
+.op.ok{background:var(--okb);border-color:var(--ok)}.op.no{background:var(--nob);border-color:var(--no)}
+.fb{display:none;margin-top:8px;padding:9px 12px;border-radius:10px;font-size:.92rem}
+.fb.ok{display:block;background:var(--okb);color:var(--ok)}.fb.no{display:block;background:var(--nob)}
+.fb.no strong{color:var(--no)}
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.55);display:none;align-items:center;justify-content:center;z-index:50;padding:16px}
+.ov.on{display:flex}
+.md{background:var(--card);border-radius:16px;max-width:520px;width:100%;max-height:80vh;overflow:auto;padding:16px;border:1px solid var(--bd)}
+.md h3{margin:0 0 10px}.md button.it{display:block;width:100%;text-align:start;font:inherit;color:var(--tx);background:transparent;border:1px solid var(--bd);border-radius:10px;padding:8px 12px;margin:6px 0;cursor:pointer}
+.md button.it:hover{border-color:var(--pr)}
+.tag{font-size:.75rem;border-radius:8px;padding:1px 8px;margin-inline-end:6px;background:var(--nob);color:var(--no)}.tag.m{background:var(--bd);color:var(--mut)}
+.x{float:right;border:0;background:none;color:var(--mut);font-size:1.4rem;cursor:pointer}
+.ov.on .md{animation:pop .22s ease-out}@keyframes pop{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:none}}
+#rov .md{max-width:400px;text-align:center}
+#rsc{font-size:2.6rem;font-weight:800;line-height:1.1;margin-top:6px}
+#rpc{color:var(--mut);font-size:.95rem}
+#rmsg{font-size:1.2rem;font-weight:700;margin:12px 0 4px}
+#rgif{display:block;max-width:100%;max-height:260px;margin:12px auto 0;border-radius:12px}
+.pb{margin-top:16px;font:inherit;font-weight:600;color:#fff;background:var(--pr);border:0;border-radius:10px;padding:8px 26px;cursor:pointer}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .pb{color:#0f1424}}
+:root[data-theme="dark"] .pb{color:#0f1424}
+.none{color:var(--mut);margin:18px 0;text-align:center}
+.fb .ar{margin-top:6px}
+.fi{display:flex;gap:8px;margin-top:6px}.fi input{flex:1;min-width:0;font:inherit;color:var(--tx);background:var(--bg);border:1px solid var(--bd);border-radius:10px;padding:9px 12px}.fi input:focus{outline:2px solid var(--pr);border-color:var(--pr)}.fi input.ok{border-color:var(--ok);background:var(--okb)}.fi input.no{border-color:var(--no);background:var(--nob)}.fi .pb{width:auto;padding:9px 18px}.bl{display:inline-block;min-width:70px;border-bottom:2px solid var(--pr)}.fb .ex{margin-top:6px;color:var(--tx)}
+</style>
+</head>
+<body>
+<header>
+ <div class="meter"><div class="ring"><svg viewBox="0 0 64 64"><circle class="bg" cx="32" cy="32" r="26"/><circle class="fg" id="fg" cx="32" cy="32" r="26" stroke-dasharray="163.4" stroke-dashoffset="163.4"/></svg><b id="rt">0%</b></div>
+ <div><div class="big" id="sc">0 / 0</div><div class="lbl">الإجابات الصحيحة</div><div class="lbl" id="st"></div></div></div>
+ <button id="rs" type="button" title="إعادة الاختبار" aria-label="إعادة الاختبار"><span class="ic" aria-hidden="true">↺</span><span class="rl">إعادة</span></button>
+ <div class="wr"><div id="wbox"><b id="wn">0</b><span class="lbl">خطأ / لم تُجَب</span></div><button id="wq" type="button" title="عرض الأسئلة الخاطئة" aria-label="عرض الأسئلة الخاطئة">?</button></div>
+</header>
+<main>
+ <h1>اختبار إدارة جودة الخدمات السياحية - الفصل الأول (أكمل الفراغات)</h1>
+ <div id="qs"></div>
+</main>
+<div class="ov" id="ov"><div class="md" role="dialog" aria-modal="true"><button class="x" id="cl" aria-label="Close">×</button><h3>الأسئلة الخاطئة أو التي لم تُجَب</h3><div id="wl"></div></div></div>
+<div class="ov" id="rov"><div class="md" dir="ltr" lang="en" role="dialog" aria-modal="true" aria-label="Your result"><button class="x" id="rx" aria-label="Close">×</button><div id="rsc"></div><div id="rpc"></div><div id="rmsg"></div><img id="rgif" alt=""><button class="pb" id="rcl" type="button">Close</button></div></div>
+<script>
+
+const L=["المحاضرة الأولى: مفهوم الجودة","المحاضرة الثانية: المداخل الأساسية لتعريف الجودة ومراحل تطور إدارة الجودة","المحاضرة الثالثة: أهمية الجودة وأهدافها وتكاليفها"];
+// [lecture, question with ___ for the gap, accepted answers separated by |, explanation]
+const R=[
+[1,"يرجع الأصل اللغوي لكلمة الجودة (Quality) إلى الكلمة اللاتينية ___.","Qualitas|كواليتاس","Qualitas تعني طبيعة الشخص أو الشيء ودرجة صلابته."],
+[1,"كان يُقصد بالجودة قديماً الدقة و___.","الإتقان","قديماً كانت الجودة تعني الدقة والإتقان، ثم تغير المفهوم مع الزمن."],
+[1,"كلمة Qualitas كانت تُستخدم لوصف ___ أو الخصائص المميزة لشيء أو شخص ما.","الطبيعة","تُستخدم لوصف الطبيعة أو الخصائص المميزة."],
+[1,"تغير مفهوم الجودة مع تطور علم الإدارة وظهور الإنتاج الكبير و___ الصناعية.","الثورة","هذه العوامل جعلت وضع معايير ورقابة دقيقة أمراً ضرورياً."],
+[1,"بعد ظهور الإنتاج الكبير أصبح من الضروري وضع ___ دقيقة وأساليب رقابة تضمن خروج المنتج بمستوى عالٍ من الإتقان.","معايير","المعايير والرقابة تضمنان خروج المنتج من المصنع بإتقان عالٍ."],
+[1,"مع اشتداد المنافسة أصبحت الجودة عنصراً ___ لتحقيق الميزة التنافسية، لا مجرد إتقان للمنتج.","استراتيجياً|استراتيجيا|استراتيجي","تحولت الجودة من إتقان المنتج إلى عنصر استراتيجي للتنافس."],
+[1,"من الأبعاد الجديدة للجودة: رضا العملاء والتحسين المستمر وجودة العمليات والخدمات، ومشاركة جميع ___ في الجودة.","العاملين","الجودة مسؤولية كل العاملين وليست مسؤولية قسم واحد."],
+[1,"من الخطأ الاعتقاد بأن الجودة العالية تقتصر على الأغلى ثمناً؛ فهي ما يتناسب مع حاجات وتوقعات ___.","العملاء","الجودة تُقاس بمدى مناسبة المنتج لحاجات العملاء وتوقعاتهم لا بسعره."],
+[1,"المنتج عالي الجودة يتناسب مع حاجات العميل من حيث الأداء الجيد والتكلفة ___ وتوفره بالكمية المطلوبة في الوقت الملائم.","المناسبة","الجودة ليست أعلى تكلفة، بل تكلفة مناسبة مع أداء جيد وتوافر في الوقت الملائم."],
+[1,"عرّف جوران الجودة بأنها ___ للاستخدام (Fitness for use).","الملاءمة|الملائمة|المواءمة","تعريف جوران: الملاءمة للاستخدام أو للغرض."],
+[1,"وفق جوران، تعني الملاءمة للاستخدام أن يكون مستخدم السلعة قادراً على ___ عليها في إنجاز ما يريده منها.","الاعتماد","المستخدم يعتمد على السلعة أو الخدمة لإنجاز غرضه."],
+[1,"عرّف كروسبي (Crosby) الجودة بأنها المطابقة مع ___.","المتطلبات","تعريف كروسبي: المطابقة مع المتطلبات."],
+[1,"العالِم الذي عرّف الجودة بأنها توجه لإشباع حاجات المستهلك في الحاضر والمستقبل هو ___.","ديمينج|ديمنج|Deming","هذا هو تعريف ديمينج."],
+[1,"الجودة عند ديمينج ليست حدثاً مؤقتاً بل عملية ___.","مستمرة|مستمره","هي عملية مستمرة تفهم احتياج العميل وتتنبأ بمستقبله."],
+[1,"من أهداف الجودة عند ديمينج فهم ما يحتاجه العميل ___ وتلبيته بدقة، والتنبؤ بما سيحتاجه مستقبلاً.","الآن|الان|حالياً|حاليا|حالي|الحالي|في الوقت الحالي|الوقت الحالي","يشمل ديمينج الاحتياج الحالي والمستقبلي معاً."],
+[1,"الجودة عند ديمينج فكر استراتيجي طويل ___ قائم على التحسين المستمر والاهتمام الدائم برضا العميل.","المدى","فهي ليست حلاً مؤقتاً بل فكر بعيد المدى."],
+[1,"عرّف معهد الجودة الأمريكي الجودة بأنها أداء العمل الصحيح وبالشكل الصحيح من ___ الأولى.","المرة","Do it right the first time."],
+[1,"عرّف جونسون الجودة بأنها تحقيق رغبات المستهلك بما يتطابق مع ___ ويحقق رضاه التام.","توقعاته|توقعات","تعريف جونسون يربط الجودة بالتوقعات والرضا التام."],
+[1,"ورد تعريف للجودة في المواصفة الدولية الآيزو رقم ___ عبر الجمعية الفرنسية للتقنيين.","9000","الآيزو 9000 تعرّف الجودة بأنها قدرة الخصائص على إرضاء المتطلبات."],
+[1,"وفق الآيزو 9000، الجودة هي قدرة مجموعة من الخصائص الجوهرية على إرضاء المتطلبات المعلنة أو ___ لمجموعة من العملاء.","الضمنية|ضمنية","المتطلبات قد تكون معلنة (صريحة) أو ضمنية (كامنة)."],
+[1,"تُعرَّف الجودة أيضاً بأنها حالة ___ مرتبطة بالمنتجات والخدمات والأفراد والعمليات والبيئة المحيطة بحيث تتطابق مع التوقعات.","ديناميكية|ديناميكيه","الجودة ليست ثابتة بل حالة ديناميكية متغيرة."],
+[1,"من مرتكزات الجودة أنها مفهوم ___ وليس مطلقاً، فهي تعتمد على مدى تلبية المنتج لتوقعات العميل.","نسبي|نسبية|نسبيا","الجودة ليست الأحسن دائماً بشكل مطلق، بل الأحسن بالنسبة للعميل."],
+[1,"الجودة لا تعني الأحسن دائماً بشكل مطلق، بل تعني الأحسن ___ للعميل الذي تمت تلبية احتياجاته.","بالنسبة","هذا يوضح نسبية مفهوم الجودة."],
+[1,"ارتباط الجودة بالسلعة والأفراد والعمليات وبيئة العمل والإدارة العليا يُعبَّر عنه بمرتكز ___.","الشمولية|شمولية","الجودة لا تقتصر على خصائص السلعة بل تمتد لكل عناصر المؤسسة."],
+[1,"تعني الشمولية أن الجودة تمتد لتشمل خصائص المنتج والأفراد والعمليات وبيئة العمل و___ العليا.","الإدارة","الجودة مسؤولية كل عناصر المؤسسة بدءاً من الإدارة العليا."],
+[1,"جودة الطعام في المطعم أو جودة الغرفة في الفندق مثال على الشمولية المتعلقة بـ ___ النهائية التي يستلمها العميل.","النتيجة","هذا بُعد النتيجة النهائية التي يستلمها العميل."],
+[1,"الاهتمام بتدريب الموظفين ومتابعة آراء النزلاء مثال على وجود تخطيط ورقابة وتبنٍّ لـ ___ الجودة.","ثقافة","يعكس ذلك بُعد التخطيط والرقابة وثقافة الجودة."],
+[1,"النظافة والأمان والتنظيم داخل المؤسسة مثال على الشمولية المتعلقة بـ ___ العام داخل المؤسسة.","المناخ","المناخ العام (النظافة، الأمان، التنظيم) جزء من الجودة الشاملة."],
+[1,"الجودة حالة ديناميكية تتطور مع تطور توقعات العملاء والمتغيرات البيئية و___.","التكنولوجية|التكنولوجيا","لذلك تحتاج المؤسسات إلى تكييف منتجاتها وخدماتها باستمرار."],
+[1,"ليس المهم وجود خصائص جيدة في المنتج بل أن تكون قادرة على ___ احتياجات العملاء فعلياً.","إشباع|اشباع|تلبية|تلبيه|تلبي|التلبية|الإشباع","الجودة تُقاس بقدرة الخصائص على إشباع الاحتياجات فعلياً."],
+[2,"من المداخل الأساسية لتعريف الجودة: التفوق والمنتج والمستخدم والتصنيع، ومدخل ___.","القيمة","المداخل الخمسة: التفوق، المنتج، المستخدم، التصنيع، القيمة."],
+[2,"يقصد بالجودة وفق مدخل ___ قدرة المنتج على تقديم أفضل أداء وأدق صفات تشبع رغبات المستهلك بغض النظر عن اختلاف الأذواق.","التفوق","هذا تعريف مدخل التفوق (Excellence)."],
+[2,"يهتم مدخل التفوق بـ ___ الفعلي للمنتج، ولا يهتم كثيراً بأذواق العملاء أو بالسعر.","الأداء","الجودة فيه = ملاءمة المنتج للاستخدام وأفضل أداء وظيفي."],
+[2,"في مدخل المنتج تُعرَّف الجودة بأنها مدى دقة قياس ___ والمواصفات الموجودة في المنتج، مثل المتانة والطعم واللون.","الخصائص","مدخل المنتج يربط الجودة بخصائص المنتج القابلة للقياس."],
+[2,"الجودة في مدخل المستخدم مفهوم شخصي ___ تتغير فيه ردود الفعل بحسب المستوى الاجتماعي والثقافي والعوامل الشخصية.","ذاتي|ذاتيا|ذاتيه","الجودة هنا إشباع حاجات وتوقعات المستهلك، وهي ذاتية."],
+[2,"التحدي الرئيسي لمدخل المستخدم أن الجودة تصبح مفهوماً ___ يختلف من عميل لآخر، فيصعب إرضاء الجميع بمنتج واحد.","نسبياً|نسبي|نسبيا","تعدد الأذواق والتوقعات يجعل الرضا الكامل لجميع العملاء صعباً."],
+[2,"تختار المؤسسة بين استراتيجية تقسيم السوق (Market Segmentation) واستراتيجية السوق ___ (Mass Market).","الكلي|الكلى","استراتيجيتان لمواجهة اختلاف احتياجات العملاء."],
+[2,"مطعم صمم قوائم وعروضاً مختلفة تناسب شرائح متنوعة من العملاء؛ فهو يطبق استراتيجية ___ السوق.","تقسيم","تصميم عروض مختلفة لشرائح متنوعة هو تقسيم السوق، مقابل سوق كلي بعرض واحد."],
+[2,"الجودة في مدخل التصنيع تعني إنتاج منتجات مطابقة تماماً لمواصفات ___ المطلوبة والمحددة مسبقاً وخالية من العيوب.","التصميم","المطابقة لمواصفات التصميم هي جوهر مدخل التصنيع."],
+[2,"الجودة وفق مدخل التصنيع = صفر ___ / أخطاء.","عيوب|عيوب","يرتبط بمفهوم عمل الشيء بشكل صحيح من أول مرة (اليابان)."],
+[2,"يمتاز مدخل التصنيع بأنه يسمح بتحقيق مستوى الجودة المطلوب بأقل ___ ممكنة.","تكلفة|تكلفه","الإنتاج الصحيح من أول مرة يقلل التكلفة."],
+[2,"في مدخل القيمة، إذا كانت المنافع أكبر من السعر المدفوع أو مساوية له فالقيمة عالية وبالتالي الجودة ___.","مرتفعة|عالية|مرتفعه","منافع ≥ سعر ⟵ قيمة عالية ⟵ جودة مرتفعة."],
+[2,"في مدخل القيمة، إذا كان السعر غالياً مقارنة بما يقدمه المنتج فالجودة ___ بنظر العميل حتى لو كان المنتج ممتازاً.","منخفضة|منخفضه|قليلة","الحكم على الجودة هنا يعتمد على نسبة المنفعة إلى السعر."],
+[2,"يمكن النظر إلى الجودة على أنها الهدف، بينما إدارة الجودة هي ___ المنهجية والعملية لتحقيقه وضمان استدامته.","الوسيلة","الجودة = الهدف، إدارة الجودة = الوسيلة."],
+[2,"بدأت أنظمة الجودة تزدهر بعد الحرب العالمية الثانية، وكانت ___ السباقة في تبني نظريات الجودة وتطبيقها.","اليابان","تلتها أمريكا ودول أوروبا."],
+[2,"طُبقت مفاهيم الجودة أولاً في المؤسسات ___ ثم امتدت للقطاعات الخدمية كالمصرفية والصحية والسياحة والتعليم.","الصناعية|الصناعيه","امتدت إلى الخدمات بعد إثبات فعاليتها ونجاحها."],
+[2,"ظهر أول نموذج لإدارة الجودة في فترة الإنتاج الضخم (1920–1940) وفيه اقتصر الاهتمام على فحص المنتجات ___ فقط.","النهائية|النهائيه","مرحلة الفحص أو التفتيش: فحص المنتج النهائي لتجنب شكاوى العملاء."],
+[2,"من سلبيات مرحلة التفتيش ارتفاع التكاليف بسبب التفتيش الواسع وإعادة العمل وزيادة ___ (إتلاف المنتجات غير المطابقة).","الفاقد","التفتيش يكتشف العيوب بعد حدوثها فيرتفع الفاقد."],
+[2,"تهدف مرحلة ضبط الجودة (1940–1960) إلى اكتشاف الأخطاء بعد ___ ومعالجتها، وليست وسيلة لمنعها من البداية.","حدوثها|حدوثه","هنا الرقابة تصحيحية: وضع معايير ثم مقارنة التنفيذ بها ثم تصحيح الانحرافات."],
+[2,"من الأساليب الإحصائية في مراقبة الجودة خرائط التحكم التي طورها والتر ___ عام 1924.","شيوهارت|شيوارت|شيوهارت|Shewhart","لكن انتشار استخدامها كان بقوة بعد الأربعينيات."],
+[2,"من الأساليب الإحصائية لمراقبة الجودة: خرائط التحكم وأخذ العينات وتحليل التشتت ومخططات ___.","باريتو|بارتو|Pareto","الأساليب: خرائط التحكم، العينات، باريتو، تحليل التشتت."],
+[2,"تركز مرحلة تأكيد الجودة (1960–1980) على ___ وقوع الخطأ من بداية التصميم حتى وصول المنتج للعميل.","منع","هي أوسع من المرحلتين السابقتين وتمنع الخطأ بدل اكتشافه بعد الإنتاج."],
+[2,"ظهر في مرحلة تأكيد الجودة في اليابان ما يسمى بـ التلف ___ (Zero Defects).","الصفري|الصفرى|صفر","الهدف أن تكون العيوب صفراً."],
+[2,"تعتمد مرحلة تأكيد الجودة مبدأ: الوقاية خير من ___.","العلاج","منع الخطأ أفضل من اكتشافه وعلاجه."],
+[2,"مرحلة إدارة الجودة الشاملة (TQM) فلسفة إدارية تركز على رضا العملاء وعلى التحسين ___ بإشراك جميع أعضاء المؤسسة.","المستمر","هي أشمل مراحل تطور فكر الجودة (1980 حتى الآن)."],
+[2,"في عام ___ أصدرت المنظمة الدولية للمواصفات (ISO) أول نسخة من ISO 9000.","1987","كانت البداية الرسمية لاعتماد معايير جودة عالمية موحدة."],
+[2,"انطلقت منهجية ستة سيجما رسمياً عام 1987 في شركة ___ على يد المهندس بيل سميث.","موتورولا|موتورولا|Motorola","بهدف تحقيق مستويات غير مسبوقة من الجودة."],
+[2,"تهدف ستة سيجما إلى تقليل العيوب إلى ما لا يزيد عن ___ عيب لكل مليون فرصة.","3.4|٣٫٤","مستوى شبه صفري للعيوب."],
+[2,"وفرت موتورولا بفضل ستة سيجما مبلغ ___ مليار دولار بين 1987 و1997 مع زيادة المبيعات خمسة أضعاف.","14|١٤","وارتفعت الإيرادات أيضاً بمقدار 20% سنوياً."],
+[2,"في عام 1988 حصلت موتورولا على جائزة مالكولم ___ القومية للجودة.","=بالدريج|Baldrige","جاءت نتيجة الزيادة الهائلة في مستويات الجودة بعد تطبيق ستة سيجما."],
+[3,"تنبع ___ المؤسسة من مستوى جودة منتجاتها أو خدماتها وعلاقاتها مع الموردين والعملاء وكفاءة العاملين.","سمعة","الاهتمام بالجودة يمنح المؤسسة شهرة ويعزز مركزها التنافسي."],
+[3,"تنفيذ الجودة في مراحل الإنتاج يكتشف الأخطاء ___ ويتجنب تكرارها، فيقل الهدر ويزيد الربح.","مبكراً|مبكرا","ينخفض التكلفة الإجمالية وترتفع الربحية والحصة السوقية."],
+[3,"خفض التكلفة الإجمالية بفضل الجودة يزيد الربحية و___ السوقية للمؤسسة.","الحصة","الجودة تقلل التكاليف الإضافية وتحسّن كفاءة استخدام الآلات والوقت."],
+[3,"وضع مواصفات قياسية محددة يحمي العميل من ___ التجاري ويعزز ثقته في المنتجات.","الغش","غياب الجودة يقلص خيارات العميل ويضطره لاقتناء منتجات دون المستوى."],
+[3,"يسهم الالتزام بالجودة في تحسين الاقتصاد الوطني من خلال زيادة ___ وتعزيز القدرة التنافسية للدولة عالمياً.","الصادرات","في عصر العولمة صارت الجودة عنصراً أساسياً للنجاح العالمي."],
+[3,"إذا قدمت المؤسسة منتجاً غير مطابق لمعايير الجودة وتسبب بأذى للمستهلك فهي تتحمل مسئولية ___.","قانونية|القانونية","تُحاسب أمام الجهات القضائية المختصة."],
+[3,"تهدف أهداف الأداء ___ للمؤسسة إلى بناء علاقات قوية مع العملاء والمجتمع والبيئة وتحقيق سمعة طيبة.","الخارجي|الخارجى","مثل تحقيق رضا العملاء والمساهمة في التنمية المجتمعية."],
+[3,"من أهداف أداء المنتج أو الخدمة تلبية حاجات العملاء مباشرة وتقديم منتج أو خدمة ___ على المنافسين.","تتفوق|تفوق|متفوقة","مثل منتج عالي الجودة وخالٍ من العيوب أو خدمة أكثر دقة من المنافسين."],
+[3,"تركز أهداف الأداء الداخلي على تحسين ___ وفاعلية الأداء داخل المؤسسة نفسها.","كفاءة","تتعلق بالموارد والعاملين والعمليات الداخلية."],
+[3,"من أهداف الأداء الداخلي اعتماد ثقافة ___ المستمر (Continuous Improvement) لضمان التقدم الدائم في العمليات والمنتجات.","التحسين","من أمثلتها أيضاً رفع كفاءة العاملين بالتدريب والتحفيز وتعزيز التعاون بين الإدارات."],
+[3,"لتطبيق الجودة تكاليف مادية تترتب على التخطيط والتصميم والتدريب و___ وشراء الأجهزة والمعدات.","التقييم","هذه تكاليف الالتزام بالجودة."],
+[3,"من تكاليف عدم تطبيق الجودة، فضلاً عن إعادة العمل والغرامات، التكاليف ___ كتضرر سمعة المؤسسة وفقدان ثقة العملاء.","المعنوية|معنوية","وهي غير ملموسة لكنها تؤدي إلى خسائر مالية فادحة."],
+[3,"تكاليف عدم تطبيق الجودة ___ بكثير تكاليف الالتزام بالجودة وتطبيق أنظمتها.","تفوق|تزيد|تتفوق|تفوق على|أكبر|اكبر|أكثر|اكثر|أكبر من|أكثر من|اكبر من|اكثر من|تزيد على|تزيد عن","كذلك عوائد الجودة تفوق تكاليف تطبيق أنظمتها."],
+[3,"تكلفة الالتزام بالجودة تعتبر ___ له عائد.","استثمار|استثماراً","لأن العوائد المادية والمعنوية تفوق التكاليف."],
+[3,"تنقسم تكاليف الجودة إلى تكاليف ضبط الجودة (Conformance) وتكاليف عدم ___ (Non-conformance).","المطابقة","الأولى ناتجة عن الالتزام بالجودة والثانية عن عدم الالتزام بها."],
+[3,"التكاليف التي تُصرف على التخطيط والتصميم والتدريب لتفادي حدوث العيوب تسمى تكاليف ___.","الوقاية","منها تدريب الموظفين وصيانة المعدات والتوعية بالجودة."],
+[3,"تكاليف الفحص والاختبار والتفتيش وإعداد تقارير الفحص وتكاليف معدات القياس تسمى تكاليف ___.","التقييم","تتكبدها المؤسسة لقياس وفحص وتقييم جودة المنتجات أو الخدمات."],
+[3,"تكاليف الإخفاق ___ ناتجة عن اكتشاف الأخطاء داخل المؤسسة وقبل خروج المنتج للمستفيدين.","الداخلي|الداخلى","مثل إعادة العمل وإهدار الموارد الأولية والوقت الضائع."],
+[3,"تكاليف معالجة الشكاوى والمرتجعات والتعويضات بعد وصول المنتج للعميل تسمى تكاليف الإخفاق ___.","الخارجي|الخارجى","لأن الخطأ اكتُشف بعد خروج المنتج من المؤسسة، ومنها الدعاوى القضائية وتضرر السمعة."],
+[3,"إعادة العمل أو ___ وإهدار الموارد الأولية والوقت الضائع أمثلة على تكاليف الإخفاق الداخلي.","الإصلاح|اصلاح","هذه أمثلة على تكاليف الإخفاق الداخلي."]
+];
+
+const S=[
+ [9,"Seriously, how do you even do that?","gif1.gif"],
+ [19,"Is that all you got?","gif2.gif"],
+ [29,"We’re getting somewhere","gif3.gif"],
+ [39,"Congratulations, I guess","gif4.gif"],
+ [49,"Go get ’em, tiger!","gif8.gif"],
+ [59,"Keep it up!","gif7.gif"],
+ [69,"Now we’re talking","gif6.gif"],
+ [79,"Okay, we get it, bookworm","gif5.gif"],
+ [89,"Somebody’s on fire!","gif9.gif"],
+ [99,"Are you even human?!","gif10.gif"],
+ [100,"Phenomenal is an understatement!!","gif11.gif"]
+];
+
+const Q=R.map(x=>[x[0]-1,"t",x[1],null,x[2].replace(/^=/,"").split("|"),x[3],x[2][0]==="="]);
+const N=Q.length,A=Array(N).fill(null),$=s=>document.querySelector(s),C=2*Math.PI*26;
+let tm;
+$("#fg").setAttribute("stroke-dasharray",C);
+// forgiving normalisation: hamza forms, ى/ي, ة/ه, tatweel, diacritics, spaces, punctuation, leading "ال"
+const nz=s=>String(s).toLowerCase().replace(/[\u064B-\u065F\u0670\u0640]/g,"").replace(/[٠-٩]/g,d=>d.charCodeAt(0)-1632).replace(/[۰-۹]/g,d=>d.charCodeAt(0)-1776).replace(/[أإآٱ]/g,"ا").replace(/[ىی]/g,"ي").replace(/ة/g,"ه").replace(/ک/g,"ك").replace(/[ؤئء]/g,"").replace(/[^\u0621-\u064Aa-z0-9]+/g," ").trim().split(" ").map(w=>w.length>4&&w.startsWith("ال")?w.slice(2):w).join("");
+const lev=(a,b)=>{let p=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){const c=[i];for(let j=1;j<=b.length;j++)c[j]=Math.min(p[j]+1,c[j-1]+1,p[j-1]+(a[i-1]===b[j-1]?0:1));p=c}return p[b.length]};
+const okAns=(v,ans,ex)=>{const y=nz(v);return !!y&&ans.some(a=>{const x=nz(a);if(x===y)return true;if(ex||/\d/.test(x))return false;const t=x.length>=14?2:x.length>=6?1:0;return t>0&&lev(x,y)<=t})};
+const esc=t=>String(t).replace(/&/g,"&amp;").replace(/</g,"&lt;");
+
+function render(){
+ let h="";
+ Q.forEach((q,i)=>{
+  if(!i)h+=`<h2>${L[q[0]]}</h2>`;else if(Q[i-1][0]!==q[0])h+=`<div class="sep"><span>الأسئلة التالية من ${L[q[0]]}</span></div>`;
+  h+=`<div class="q" id="q${i}"><div class="meta">السؤال ${i+1} من ${N} · أكمل الفراغ</div><div class="qt">${q[2].replace("___",'<span class="bl"></span>')}</div><div class="fi"><input id="in${i}" type="text" dir="rtl" autocomplete="off" placeholder="اكتب إجابتك هنا"><button class="pb ck" type="button" data-i="${i}">تحقق</button></div><div class="fb"></div></div>`;
+ });
+ $("#qs").innerHTML=h;
+}
+$("#qs").addEventListener("click",e=>{const b=e.target.closest(".ck");if(b)check(+b.dataset.i)});
+$("#qs").addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.matches(".fi input"))check(+e.target.id.slice(2))});
+
+const score=()=>A.filter(a=>a===1).length;
+const pct=ok=>!N?0:ok===N?100:Math.min(99,Math.round(ok/N*100));
+
+function check(i){
+ if(A[i]!==null)return;
+ const q=Q[i],c=$("#q"+i),inp=$("#in"+i),f=c.querySelector(".fb"),v=inp.value;
+ if(!v.trim()){inp.focus();return}
+ const ok=okAns(v,q[4],q[6]);A[i]=ok?1:0;
+ inp.disabled=true;inp.classList.add(ok?"ok":"no");c.querySelector(".ck").disabled=true;
+ const shown=q[4][0];
+ if(ok){f.className="fb ok";f.innerHTML=`✓ إجابة صحيحة${nz(v)===nz(shown)?"":` — الصيغة المعتمدة: <strong>${esc(shown)}</strong>`}<div class="ex" dir="rtl">${q[5]}</div>`}
+ else{f.className="fb no";f.innerHTML=`<strong>✗ إجابة خاطئة.</strong> الإجابة الصحيحة: <strong dir="rtl">${esc(shown)}</strong>${q[4].length>1?` <span class="lbl">(مقبول أيضاً: ${esc(q[4].slice(1).join("، "))})</span>`:""}<div class="ex" dir="rtl">${q[5]}</div>`}
+ upd();
+ if(A.every(a=>a!==null)){clearTimeout(tm);tm=setTimeout(showResult,800)}
+}
+function upd(){
+ const ok=score(),done=A.filter(a=>a!==null).length;
+ $("#sc").textContent=ok+" / "+N;$("#rt").textContent=pct(ok)+"%";
+ $("#fg").style.strokeDashoffset=C*(1-(N?ok/N:0));$("#wn").textContent=N-ok;
+ $("#st").textContent=done===N?`انتهى الاختبار: نتيجتك ${ok} من ${N}`:`أجبت عن ${done} من ${N}`;
+}
+
+// ---------- final result pop-up ----------
+const gif=$("#rgif");gif.onerror=()=>{gif.style.display="none"};
+function showResult(){
+ const ok=score(),p=pct(ok),s=S.find(x=>p<=x[0])||S[S.length-1];
+ $("#rsc").textContent=ok+" / "+N;$("#rpc").textContent=p+"%";$("#rmsg").textContent=s[1];
+ gif.style.display="";gif.src=s[2];
+ $("#rov").classList.add("on");
+}
+
+// ---------- wrong answers pop-up (opened by the ? button) ----------
+$("#wq").onclick=()=>{
+ const l=Q.map((q,i)=>i).filter(i=>A[i]!==1);
+ $("#wl").innerHTML=l.length?l.map(i=>`<button class="it" type="button" data-go="${i}"><span class="tag ${A[i]===null?"m":""}">${A[i]===null?"لم تُجَب":"خطأ"}</span>Q${i+1}: <bdi>${Q[i][2].slice(0,70)}${Q[i][2].length>70?"…":""}</bdi></button>`).join(""):"لا توجد أسئلة خاطئة أو لم تُجَب 🎉";
+ $("#ov").classList.add("on");
+};
+const close=()=>document.querySelectorAll(".ov").forEach(o=>o.classList.remove("on"));
+$("#cl").onclick=close;$("#rx").onclick=close;$("#rcl").onclick=close;
+document.querySelectorAll(".ov").forEach(o=>o.addEventListener("click",e=>{if(e.target===o)close()}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")close()});
+$("#wl").addEventListener("click",e=>{
+ const b=e.target.closest("[data-go]");if(!b)return;close();
+ const c=$("#q"+b.dataset.go);c.scrollIntoView({behavior:"smooth",block:"start"});
+ c.classList.remove("flash");void c.offsetWidth;c.classList.add("flash");
+});
+
+// ---------- reset ----------
+$("#rs").onclick=()=>{
+ clearTimeout(tm);close();
+ A.fill(null);render();upd();
+ window.scrollTo({top:0,behavior:"smooth"});
+};
+
+render();upd();
+</script>
+</body>
+</html>
